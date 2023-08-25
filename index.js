@@ -2,6 +2,10 @@ import express from 'express'
 import { somar } from './exercicios/ex1.js'
 import { salario } from './exercicios/ex2.js'
 import { mediapeso5pessoas } from './exercicios/ex3.js'
+import { trans_celsius } from './exercicios/ex4.js'
+import { trans_milha } from './exercicios/ex5.js'
+import { trans_tempo } from './exercicios/ex6.js'
+import { trans_km } from './exercicios/ex7.js'
 
 const app = express()
 app.use(express.json())
@@ -16,7 +20,8 @@ app.post('/api/exemplo', (req, res) => {
 })
 
 app.get('/api/exercicio1', (req, res) => {
-    const resultado = somar(req.query.num1, req.query.num2)
+    const resultado = somar(parseFloat(req.query.num1),
+    parseFloat(req.query.num2))
 
     res.json({
         message: `resultado: ${resultado}`
@@ -32,11 +37,11 @@ app.get('/api/exercicio2', (req, res) => {
 })
 
 app.get('/api/exercicio3', (req, res) => {
-    const resultado = mediapeso5pessoas(req.query.peso1, 
-        req.query.peso2, 
-        req.query.peso3, 
-        req.query.peso4, 
-        req.query.peso5
+    const resultado = mediapeso5pessoas(parseFloat(req.query.peso1), 
+        parseFloat(req.query.peso2), 
+        parseFloat(req.query.peso3), 
+        parseFloat(req.query.peso4), 
+        parseFloat(req.query.peso5)
     )
 
     res.json({
@@ -45,18 +50,34 @@ app.get('/api/exercicio3', (req, res) => {
 })
 
 app.get('/api/exercicio4', (req, res) => {
-    const celsius = parseFloat(req.query.celsius)
+    const resultado = trans_celsius(parseFloat(req.query.celsius))
 
     res.json({
-        message: `resultado: ${(9*celsius+160)/5}`
+        message: `resultado: ${resultado}`
     })
 })
 
 app.get('/api/exercicio5', (req, res) => {
-    const milha = parseFloat(req.query.milha)
+    const resultado = trans_milha(parseFloat(req.query.milha))
 
     res.json({
-        message: `resultado: ${milha*1.60934}`
+        message: `resultado: ${resultado}`
+    })
+})
+
+app.get('/api/exercicio6', (req,res) => {
+    const resultado = trans_tempo(parseFloat(req.query.segundo))
+
+    res.json({
+        message: `resultado: ${resultado}`
+    })
+})
+
+app.get('/api/exercicio7', (req,res) => {
+    const resultado = trans_km(parseFloat(req.query.quilometro))
+
+    res.json({
+        message: `resultado: ${resultado}`
     })
 })
 

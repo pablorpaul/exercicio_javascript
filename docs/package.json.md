@@ -1,11 +1,14 @@
 ```js
-{ // Exercios de JavaScript
+{ //Exercicios JavaScript
   "name": "exercicio_javascript",
   "version": "0.0.1",
   "description": "Jovem Programador",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "teste": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,6 +19,13 @@
   "bugs": {
     "url": "https://github.com/pablorpaul/exercicio_javascript/issues"
   },
-  "homepage": "https://github.com/pablorpaul/exercicio_javascript#readme"
+  "homepage": "https://github.com/pablorpaul/exercicio_javascript#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1"
+  }
 }
 ```
