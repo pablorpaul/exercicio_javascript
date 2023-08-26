@@ -1,11 +1,12 @@
-import express from 'express'
-import { somar } from './exercicios/ex1.js'
-import { salario } from './exercicios/ex2.js'
-import { mediapeso5pessoas } from './exercicios/ex3.js'
-import { trans_celsius } from './exercicios/ex4.js'
-import { trans_milha } from './exercicios/ex5.js'
-import { trans_tempo } from './exercicios/ex6.js'
-import { trans_km } from './exercicios/ex7.js'
+const express = require('express')
+const { somar } = require('./exercicios/ex1.js')
+const { salario } = require('./exercicios/ex2.js')
+const { mediapeso5pessoas } = require('./exercicios/ex3.js')
+const { trans_celsius } = require('./exercicios/ex4.js')
+const { trans_milha } = require('./exercicios/ex5.js')
+const { trans_tempo } = require('./exercicios/ex6.js')
+const { trans_km } = require('./exercicios/ex7.js')
+const { tabuada } = require('./exercicios/ex8.js')
 
 const app = express()
 app.use(express.json())

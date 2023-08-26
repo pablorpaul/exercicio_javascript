@@ -1,4 +1,4 @@
-export function trans_tempo(segundo){
+function trans_tempo(segundo){
     const minuto = parseInt((segundo/60)%60)
     const hora = parseInt((segundo/60)/60)
     const sobra_seg = parseInt(segundo%60)
@@ -6,3 +6,5 @@ export function trans_tempo(segundo){
 
     return resultado;
 }
+
+module.exports = { trans_tempo }

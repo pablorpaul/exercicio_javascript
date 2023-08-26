@@ -1,5 +1,5 @@
-import { describe, expect, it } from '@jest/globals';
-import {somar} from './exercicios/ex1.js';
+const { describe, expect, it } = require('@jest/globals')
+const { somar } = require('../exercicios/ex1.js')
  
 describe('Testes do primeiro exercício', () => {
     
