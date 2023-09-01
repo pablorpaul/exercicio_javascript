@@ -82,6 +82,12 @@ app.get('/api/exercicio7', (req,res) => {
     })
 })
 
+app.post('/api/exercicio8', (req,res) => {
+    const resultado = tabuada(parseFloat(req.body.num))
+
+    res.json(resultado)
+})
+
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
 })
