@@ -92,13 +92,13 @@ class ServicoExercicio {
     
         var result = 0
     
-        if(oper = '+'){
+        if(oper == '+'){
             result = num1 + num2
-        }else if (oper = '-'){
+        }else if (oper == '-'){
             result = num1 - num2
-        }else if (oper = '/'){
+        }else if (oper == '/'){
             result = num1 / num2
-        }else if (oper = '*'){
+        }else if (oper == '*'){
             result = num1 * num2
         }
     

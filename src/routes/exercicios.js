@@ -23,6 +23,6 @@ router.post('/api/exercicio9', controller.CalcularMedia)
 
 router.post('/api/exercicio10', controller.CalcularIMC)
 
-router.post('/api/exercicio2', controller.Calculadora)
+router.post('/api/exercicio11', controller.Calculadora)
 
 module.exports = router
